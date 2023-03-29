@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './main.scss'
 import { HiOutlineLocationMarker  } from 'react-icons/hi';
 import { BsClipboardCheck  } from 'react-icons/bs';
@@ -11,6 +11,9 @@ import img6 from '../../Assets/img6.jpg'
 import img7 from '../../Assets/img7.jpg'
 import img8 from '../../Assets/img8.jpg'
 import img9 from '../../Assets/img9.jpg'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Main = () => {
 
@@ -97,12 +100,16 @@ const Main = () => {
             description: 'The opitome of romance, Bora Bora is one of the best travel destination in the world. This place is known for its luxurious stays and adventures activities.'
         },
     ]
+
+    useEffect(()=>{
+        Aos.init({duration: 2000})
+    },[])
         
     
     return (
         <section className='main container section'>
             <div className="secTitle">
-                <h3 className="title">
+                <h3 data-aos="fade-right" className="title">
                     Most Visited Destinations
                 </h3>
             </div>
@@ -111,7 +118,7 @@ const Main = () => {
                 {
                     Data.map(({id, imgSrc, desTitle, location, grade,fees,description})=>{
                         return(
-                            <div key={id}className="singleDestination">
+                            <div data-aos="fade-up"  key={id}className="singleDestination">
                                 <div className="imageDiv">
                                     <img src={imgSrc} alt={desTitle} />
                                 </div>
