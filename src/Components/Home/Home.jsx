@@ -2,6 +2,7 @@ import React from 'react';
 import './home.scss'
 import video from '../../Assets/video.mp4'
 import { GrLocation } from 'react-icons/gr';
+import { HiFilter } from 'react-icons/hi';
 
 const Home = () => {
     return (
@@ -27,16 +28,13 @@ const Home = () => {
                         <GrLocation className='icon'/>
                     </div>
                 </div>
-            </div>   
-             <div className="cardDiv grid">
+
                 <div className="dateInput">
                     <label htmlFor="city">Select Your Date:</label>
                     <div className="input flex">
                         <input type="date" />
                     </div>
                 </div>
-            </div>   
-             <div className="cardDiv grid">
                 <div className="priceInput">
                     <div className="label_total flex">
                         <label htmlFor="price">Max Price:</label>
@@ -46,7 +44,16 @@ const Home = () => {
                         <input type="range" max="5000" min="1000"/>
                     </div>
                 </div>
-            </div>   
+
+                <div className="searchOptions flex">
+                    <HiFilter className="icon"/>
+                    <span>MORE FILTERS</span>
+                </div>
+            </div>  
+            
+             
+  
+  
             </div>
         </section>
     );
