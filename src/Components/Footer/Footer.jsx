@@ -11,13 +11,13 @@ const Footer = () => {
             </div>
 
             <div className="secContent container">
-                <div className="contentDiv flex">
+                <div className="contactDiv flex">
                     <div className="text">
                         <small>KEEP IN TOUCH</small>
                         <h2>Travel With Us</h2>
                     </div>
 
-                    <div className="inputDic flex">
+                    <div className="inputDiv flex">
                         <input type="text" placeholder='Enter Your Email..' />
                         <button className='btn flex' type='submit'>
                             SEND<FiSend className='icon'/>
